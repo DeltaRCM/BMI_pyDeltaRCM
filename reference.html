@@ -1,21 +1,21 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
-    <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>API and implementation notes &#8212; BMI_pyDeltaRCM 0.1.1 documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css" />
     <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     <link rel="stylesheet" href="_static/style.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="User Guide" href="userguide.html" />
@@ -39,68 +39,68 @@
 <h1>API and implementation notes<a class="headerlink" href="#api-and-implementation-notes" title="Permalink to this headline">¶</a></h1>
 <p>The Basic Model Interface API defines a set of methods and attributes.
 These methods are implemented as detailed in the <a class="reference external" href="https://bmi.readthedocs.io/en/latest/?badge=latest">BMI specification</a></p>
-<dl class="class">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta">
-<em class="property">class </em><code class="descclassname">BMI_pyDeltaRCM.bmidelta.</code><code class="descname">BmiDelta</code><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">BMI_pyDeltaRCM.bmidelta.</span></span><span class="sig-name descname"><span class="pre">BmiDelta</span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Basic Model Interface implementation for pyDeltaRCM.</p>
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.__init__">
-<code class="descname">__init__</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.__init__" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.__init__" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a BmiDelta model that is ready for initialization.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.finalize">
-<code class="descname">finalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.finalize" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.finalize">
+<span class="sig-name descname"><span class="pre">finalize</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.finalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Finalize model.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_component_name">
-<code class="descname">get_component_name</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_component_name" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_component_name">
+<span class="sig-name descname"><span class="pre">get_component_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_component_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Name of the component.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_current_time">
-<code class="descname">get_current_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_current_time" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_current_time">
+<span class="sig-name descname"><span class="pre">get_current_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_current_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Current time of model.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_end_time">
-<code class="descname">get_end_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_end_time" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_end_time">
+<span class="sig-name descname"><span class="pre">get_end_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_end_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>End time of model.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_count">
-<code class="descname">get_grid_edge_count</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_count">
+<span class="sig-name descname"><span class="pre">get_grid_edge_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of edges in the grid.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Not implemented.</p>
-</aside>
+</div>
 <p>Could be computed from the rectilinear type?</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The total number of grid edges.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_nodes">
-<code class="descname">get_grid_edge_nodes</code><span class="sig-paren">(</span><em>grid: int</em>, <em>edge_nodes: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_nodes" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_nodes">
+<span class="sig-name descname"><span class="pre">get_grid_edge_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">edge_nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_edge_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the edge-node connectivity.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>edge_nodes</strong> (ndarray of int, shape <em>(2 x nnodes,)</em>) – A numpy array to place the edge-node connectivity. For each edge,
@@ -108,63 +108,63 @@ connectivity is given as node at edge tail, followed by node at
 edge head.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the edge-node connectivity.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_count">
-<code class="descname">get_grid_face_count</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_count">
+<span class="sig-name descname"><span class="pre">get_grid_face_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of faces in the grid.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Not implemented.</p>
-</aside>
+</div>
 <p>Could be computed from the rectilinear type?</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The total number of grid faces.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_edges">
-<code class="descname">get_grid_face_edges</code><span class="sig-paren">(</span><em>grid: int</em>, <em>face_edges: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_edges" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_edges">
+<span class="sig-name descname"><span class="pre">get_grid_face_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_edges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the face-edge connectivity.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>face_edges</strong> (<em>ndarray of int</em>) – A numpy array to place the face-edge connectivity.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the face-edge connectivity.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_nodes">
-<code class="descname">get_grid_face_nodes</code><span class="sig-paren">(</span><em>grid: int</em>, <em>face_nodes: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_nodes" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_nodes">
+<span class="sig-name descname"><span class="pre">get_grid_face_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">face_nodes</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_face_nodes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the face-node connectivity.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>face_nodes</strong> (<em>ndarray of int</em>) – A numpy array to place the face-node connectivity. For each face,
@@ -172,449 +172,449 @@ the nodes (listed in a counter-clockwise direction) that form the
 boundary of the face.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the face-node connectivity.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_node_count">
-<code class="descname">get_grid_node_count</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_node_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_node_count">
+<span class="sig-name descname"><span class="pre">get_grid_node_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_node_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of nodes in the grid.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Implemented as an alias to <a class="reference internal" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size" title="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_grid_size</span></code></a>.</p>
-</aside>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The total number of grid nodes.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_nodes_per_face">
-<code class="descname">get_grid_nodes_per_face</code><span class="sig-paren">(</span><em>grid: int</em>, <em>nodes_per_face: numpy.ndarray</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_nodes_per_face" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_nodes_per_face">
+<span class="sig-name descname"><span class="pre">get_grid_nodes_per_face</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nodes_per_face</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_nodes_per_face" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the number of nodes for each face.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>nodes_per_face</strong> (ndarray of int, shape <em>(nfaces,)</em>) – A numpy array to place the number of edges per face.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the number of nodes per edge.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_origin">
-<code class="descname">get_grid_origin</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_origin" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_origin">
+<span class="sig-name descname"><span class="pre">get_grid_origin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_origin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Origin of uniform rectilinear grid.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_rank">
-<code class="descname">get_grid_rank</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_rank" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_rank">
+<span class="sig-name descname"><span class="pre">get_grid_rank</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_rank" title="Permalink to this definition">¶</a></dt>
 <dd><p>Rank of grid.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid_id</strong> (<em>int</em>) – Identifier of a grid.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Rank of grid.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_shape">
-<code class="descname">get_grid_shape</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_shape" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_shape">
+<span class="sig-name descname"><span class="pre">get_grid_shape</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of rows and columns of uniform rectilinear grid.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size">
-<code class="descname">get_grid_size</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size">
+<span class="sig-name descname"><span class="pre">get_grid_size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Size of grid.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid_id</strong> (<em>int</em>) – Identifier of a grid.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Size of grid.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_spacing">
-<code class="descname">get_grid_spacing</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_spacing" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_spacing">
+<span class="sig-name descname"><span class="pre">get_grid_spacing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_spacing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spacing of rows and columns of uniform rectilinear grid.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_type">
-<code class="descname">get_grid_type</code><span class="sig-paren">(</span><em>grid_id</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_type">
+<span class="sig-name descname"><span class="pre">get_grid_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Type of grid.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_x">
-<code class="descname">get_grid_x</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_x" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_x">
+<span class="sig-name descname"><span class="pre">get_grid_x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get coordinates of grid nodes in the x direction.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Internally, the pyDeltaRCM model refers to the down-stream
 direction as <cite>x</cite>, which is the row-coordinate of the grid, and
 opposite the BMI specification.</p>
-</aside>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>x</strong> (ndarray of float, shape <em>(nrows,)</em>) – A numpy array to hold the x-coordinates of the grid node columns.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the grid’s column x-coordinates.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_y">
-<code class="descname">get_grid_y</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_y" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_y">
+<span class="sig-name descname"><span class="pre">get_grid_y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_y" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get coordinates of grid nodes in the y direction.</p>
 <div class="admonition hint">
 <p class="admonition-title">Hint</p>
 <p>Internally, the pyDeltaRCM model refers to the cross-stream
 direction as <cite>y</cite>, which is the column-coordinate of the grid, and
 opposite the BMI specification.</p>
-</aside>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the grid’s row y-coordinates.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_z">
-<code class="descname">get_grid_z</code><span class="sig-paren">(</span><em>grid: int</em><span class="sig-paren">)</span> &#x2192; numpy.ndarray<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_z" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_z">
+<span class="sig-name descname"><span class="pre">get_grid_z</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">grid</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.ndarray</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_grid_z" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get coordinates of grid nodes in the z direction.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>grid</strong> (<em>int</em>) – A grid identifier.</p></li>
 <li><p><strong>z</strong> (ndarray of float, shape <em>(nlayers,)</em>) – A numpy array to hold the z-coordinates of the grid nodes layers.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The input numpy array that holds the grid’s layer z-coordinates.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>ndarray of float</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_item_count">
-<code class="descname">get_input_item_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_item_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_item_count">
+<span class="sig-name descname"><span class="pre">get_input_item_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_item_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Count of a model’s input variables.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The number of input variables.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_var_names">
-<code class="descname">get_input_var_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_var_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_var_names">
+<span class="sig-name descname"><span class="pre">get_input_var_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_input_var_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get names of input variables.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_item_count">
-<code class="descname">get_output_item_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_item_count" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_item_count">
+<span class="sig-name descname"><span class="pre">get_output_item_count</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_item_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Count of a model’s output variables.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The number of output variables.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_var_names">
-<code class="descname">get_output_var_names</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_var_names" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_var_names">
+<span class="sig-name descname"><span class="pre">get_output_var_names</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_output_var_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get names of output variables.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_start_time">
-<code class="descname">get_start_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_start_time" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_start_time">
+<span class="sig-name descname"><span class="pre">get_start_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_start_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start time of model.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_step">
-<code class="descname">get_time_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_step" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_step">
+<span class="sig-name descname"><span class="pre">get_time_step</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time step of model.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_units">
-<code class="descname">get_time_units</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_units" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_units">
+<span class="sig-name descname"><span class="pre">get_time_units</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_time_units" title="Permalink to this definition">¶</a></dt>
 <dd><p>Time units of the model.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CSDMS uses the UDUNITS standard from Unidata.</p>
-</aside>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p>The model time unit; e.g., <cite>days</cite> or <cite>s</cite>.</p>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dt class="field-even">Return type</dt>
 <dd class="field-even"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value">
-<code class="descname">get_value</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value">
+<span class="sig-name descname"><span class="pre">get_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy of values.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Copy of values.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>array_like</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_at_indices">
-<code class="descname">get_value_at_indices</code><span class="sig-paren">(</span><em>var_name</em>, <em>indices</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_at_indices" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_at_indices">
+<span class="sig-name descname"><span class="pre">get_value_at_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_at_indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get values at particular indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p></li>
 <li><p><strong>indices</strong> (<em>array_like</em>) – Array of indices.</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Values at indices.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>array_like</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr">
-<code class="descname">get_value_ptr</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr">
+<span class="sig-name descname"><span class="pre">get_value_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference to values.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Value array.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>array_like</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ref">
-<code class="descname">get_value_ref</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ref" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ref">
+<span class="sig-name descname"><span class="pre">get_value_ref</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ref" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference to values, legacy BMI 1.0 api.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Value array.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>array_like</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_grid">
-<code class="descname">get_var_grid</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_grid" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_grid">
+<span class="sig-name descname"><span class="pre">get_var_grid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_grid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grid id for a variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Grid id.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_itemsize">
-<code class="descname">get_var_itemsize</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_itemsize" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_itemsize">
+<span class="sig-name descname"><span class="pre">get_var_itemsize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_itemsize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the size (in bytes) of one element of a variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – An input or output variable name, a CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Item size in bytes.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_location">
-<code class="descname">get_var_location</code><span class="sig-paren">(</span><em>name: str</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_location" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_location">
+<span class="sig-name descname"><span class="pre">get_var_location</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_location" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the grid element type that the a given variable is defined on.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>CSDMS uses the <a class="reference external" href="http://ugrid-conventions.github.io/ugrid-conventions">ugrid conventions</a> to define unstructured grids.</p>
-</aside>
+</div>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – An input or output variable name, a CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>The grid location on which the variable is defined. Must be one of
 <cite>“node”</cite>, <cite>“edge”</cite>, or <cite>“face”</cite>.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_nbytes">
-<code class="descname">get_var_nbytes</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_nbytes" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_nbytes">
+<span class="sig-name descname"><span class="pre">get_var_nbytes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_nbytes" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get units of variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Size of data array in bytes.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>int</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_type">
-<code class="descname">get_var_type</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_type" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_type">
+<span class="sig-name descname"><span class="pre">get_var_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Data type of variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Data type.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_units">
-<code class="descname">get_var_units</code><span class="sig-paren">(</span><em>var_name</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_units" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_units">
+<span class="sig-name descname"><span class="pre">get_var_units</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_var_units" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get units of variable.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Variable units.</p>
 </dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.initialize">
-<code class="descname">initialize</code><span class="sig-paren">(</span><em>filename=None</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.initialize" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.initialize">
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.initialize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize the model.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>filename</strong> (<em>str</em><em>, </em><em>optional</em>) – Path to name of input file. Use all pyDeltaRCM defaults, if not
 provided.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value">
-<code class="descname">set_value</code><span class="sig-paren">(</span><em>var_name</em>, <em>src</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value">
+<span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set model values.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p></li>
 <li><p><strong>src</strong> (<em>array_like</em>) – Array of new values.</p></li>
@@ -623,12 +623,12 @@ provided.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value_at_indices">
-<code class="descname">set_value_at_indices</code><span class="sig-paren">(</span><em>var_name</em>, <em>src</em>, <em>indices</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value_at_indices" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value_at_indices">
+<span class="sig-name descname"><span class="pre">set_value_at_indices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value_at_indices" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set model values at particular indices.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p></li>
 <li><p><strong>src</strong> (<em>array_like</em>) – Array of new values.</p></li>
@@ -638,29 +638,29 @@ provided.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update">
-<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update" title="Permalink to this definition">¶</a></dt>
 <dd><p>Advance model by one time step.</p>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update_frac">
-<code class="descname">update_frac</code><span class="sig-paren">(</span><em>time_frac</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update_frac" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update_frac">
+<span class="sig-name descname"><span class="pre">update_frac</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">time_frac</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update_frac" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update model by a fraction of a time step.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>time_frac</strong> (<em>float</em>) – Fraction of a time step.</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="method">
-<dt id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update_until">
-<code class="descname">update_until</code><span class="sig-paren">(</span><em>then</em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update_until" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.update_until">
+<span class="sig-name descname"><span class="pre">update_until</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">then</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.update_until" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update model until a particular time.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>then</strong> (<em>float</em>) – Time to run model until.</p>
 </dd>
 </dl>
@@ -707,15 +707,15 @@ provided.</p>
 </ul>
 </div>
 <div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
+  <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
 
 
 
@@ -732,7 +732,7 @@ provided.</p>
       &copy;2020, The DeltaRCM Team.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.0.1</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
