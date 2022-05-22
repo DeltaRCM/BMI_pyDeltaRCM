@@ -518,9 +518,9 @@ class TestBmiApiReqts:
         f.close()
         delta = BmiDelta()
         delta.initialize(p)
-        assert delta.get_value_ptr('sea_water_surface__elevation') is delta._values['sea_water_surface__elevation']
-        assert delta.get_value_ptr('sea_water__depth') is delta._values['sea_water__depth']
-        assert delta.get_value_ptr('sea_bottom_surface__elevation') is delta._values['sea_bottom_surface__elevation']
+        assert delta.get_value_ptr('sea_water_surface__elevation') is getattr(delta._delta, delta._values['sea_water_surface__elevation'])
+        assert delta.get_value_ptr('sea_water__depth') is getattr(delta._delta, delta._values['sea_water__depth'])
+        assert delta.get_value_ptr('sea_bottom_surface__elevation') is getattr(delta._delta, delta._values['sea_bottom_surface__elevation'])
         assert delta.get_value_ptr('sea_water_surface__elevation') is delta._delta.stage
         assert delta.get_value_ptr('sea_water__depth') is delta._delta.depth
         assert delta.get_value_ptr('sea_bottom_surface__elevation') is delta._delta.eta
