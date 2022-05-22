@@ -460,6 +460,16 @@ opposite the BMI specification.</p>
 <dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr">
 <span class="sig-name descname"><span class="pre">get_value_ptr</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.get_value_ptr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reference to values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In implementation, we use <cite>self._values</cite> of the BMI wrapper as a
+dictionary storing the DeltaModel attribute name, rather than the
+actual pointer directly to the attribute. This is necessary so
+that numeric scalar attributes of the DeltaModel (i.e., boundary
+conditions) can be modified by the BMI <cite>set_value</cite> method.</p>
+<p>Stille, the result of what is returned by this method is identical
+to the standard BMI.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>var_name</strong> (<em>str</em>) – Name of variable as CSDMS Standard Name.</p>
@@ -613,6 +623,14 @@ provided.</p>
 <dt class="sig sig-object py" id="BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value">
 <span class="sig-name descname"><span class="pre">set_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BMI_pyDeltaRCM.bmidelta.BmiDelta.set_value" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set model values.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In implementation, we use <cite>self._values</cite> of the BMI wrapper as a
+dictionary storing the DeltaModel attribute name, rather than the
+actual pointer directly to the attribute. This is necessary so
+that numeric scalar attributes of the DeltaModel (i.e., boundary
+conditions) can be modified by the BMI <cite>set_value</cite> method.</p>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
