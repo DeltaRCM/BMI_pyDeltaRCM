@@ -582,7 +582,7 @@ class TestBmiApiReqts:
         f.close()
         delta = BmiDelta()
         delta.initialize(p)
-        assert type(delta.get_var_grid('sea_water_surface__elevation')) in [np.int, np.float]
+        assert type(delta.get_var_grid('sea_water_surface__elevation')) in [int, float]
 
     def test_get_grid_rank(self, tmp_path):
         filename = 'user_parameters.yml'
