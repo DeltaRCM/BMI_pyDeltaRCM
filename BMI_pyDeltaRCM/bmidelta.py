@@ -129,18 +129,19 @@ class BmiDelta(Bmi):
         else:
             self._delta = DeltaModel()
 
-        # populate the BMI values fields with links to the pyDeltaRCM attrs
+        # populate the BMI values fields with strings naming 
+        # the attributed to the pyDeltaRCM attrs
         self._values = {
-            'channel_exit_water_flow__speed': self._delta.u0,
-            'channel_exit_water_x-section__width': self._delta.N0_meters,
-            'channel_exit_water_x-section__depth': self._delta.h0,
-            'sea_water_surface__mean_elevation': self._delta.H_SL,
-            'sea_water_surface__rate_change_elevation': self._delta.SLR,
-            'channel_exit_water_sediment~bedload__volume_fraction': self._delta.f_bedload,
-            'channel_exit_water_sediment~suspended__mass_concentration': self._delta.C0_percent,
-            'sea_water_surface__elevation': self._delta.stage,
-            'sea_water__depth': self._delta.depth,
-            'sea_bottom_surface__elevation': self._delta.eta}
+            'channel_exit_water_flow__speed': 'u0',
+            'channel_exit_water_x-section__width': 'N0_meters',
+            'channel_exit_water_x-section__depth': 'h0',
+            'sea_water_surface__mean_elevation': 'H_SL',
+            'sea_water_surface__rate_change_elevation': 'SLR',
+            'channel_exit_water_sediment~bedload__volume_fraction': 'f_bedload',
+            'channel_exit_water_sediment~suspended__mass_concentration': 'C0_percent',
+            'sea_water_surface__elevation': 'stage',
+            'sea_water__depth': 'depth',
+            'sea_bottom_surface__elevation': 'eta'}
         self._var_units = {
             'channel_exit_water_flow__speed': 'm s-1',
             'channel_exit_water_x-section__width': 'm',
@@ -306,6 +307,17 @@ class BmiDelta(Bmi):
     def get_value_ptr(self, var_name):
         """Reference to values.
 
+        .. note::
+
+            In implementation, we use `self._values` of the BMI wrapper as a
+            dictionary storing the DeltaModel attribute name, rather than the
+            actual pointer directly to the attribute. This is necessary so
+            that numeric scalar attributes of the DeltaModel (i.e., boundary
+            conditions) can be modified by the BMI `set_value` method. 
+
+            Stille, the result of what is returned by this method is identical
+            to the standard BMI.
+
         Parameters
         ----------
         var_name : str
@@ -316,7 +328,8 @@ class BmiDelta(Bmi):
         array_like
             Value array.
         """
-        return self._values[var_name]
+        key = self._values[var_name]
+        return getattr(self._delta, key)
 
     def get_value_ref(self, var_name):
         """Reference to values, legacy BMI 1.0 api.
@@ -370,6 +383,14 @@ class BmiDelta(Bmi):
     def set_value(self, var_name, src):
         """Set model values.
 
+        .. note::
+
+            In implementation, we use `self._values` of the BMI wrapper as a
+            dictionary storing the DeltaModel attribute name, rather than the
+            actual pointer directly to the attribute. This is necessary so
+            that numeric scalar attributes of the DeltaModel (i.e., boundary
+            conditions) can be modified by the BMI `set_value` method.
+
         Parameters
         ----------
         var_name : str
@@ -378,8 +399,16 @@ class BmiDelta(Bmi):
             Array of new values.
         """
         val = self.get_value_ptr(var_name)
-        val[:] = src
-
+        # check the type of the ptr
+        if isinstance(val, np.ndarray):
+            # if array, set the values
+            val[:] = src
+        else:
+            # we have to actually update the object on the underlying
+            # object self._delta
+            key = self._values[var_name]
+            setattr(self._delta, key, src)
+        
     def set_value_at_indices(self, var_name, src, indices):
         """Set model values at particular indices.
 
@@ -622,3 +651,31 @@ class BmiDelta(Bmi):
 
     def get_grid_nodes_per_face(self, grid: int, nodes_per_face: np.ndarray) -> np.ndarray:
         raise NotImplementedError
+
+    # @property
+    # def channel_exit_water_flow__speed(self):
+    #     return self.get_value('channel_exit_water_flow__speed')
+
+    # @channel_exit_water_flow__speed.setter
+    # def channel_exit_water_flow__speed(self, src):
+    #     self._delta.u0 = src
+
+    # @property
+    # def channel_exit_water_sediment~bedload__volume_fraction(self):
+    #     return self.get_value('channel_exit_water_sediment~bedload__volume_fraction')
+
+    # @channel_exit_water_sediment_bedload__volume_fraction.setter
+    # def channel_exit_water_sediment_bedload__volume_fraction(self, src):
+    #     self._delta.u0 = src
+
+
+    
+
+        # 'channel_exit_water_x-section__depth',
+        # 'channel_exit_water_x-section__width',
+        # 'channel_exit_water_sediment~suspended__mass_concentration',
+        # 'sea_water_surface__rate_change_elevation',
+        # 'sea_water_surface__mean_elevation',
+        # 'sea_water_surface__elevation',
+        # 'sea_water__depth',
+        # 'sea_bottom_surface__elevation',
