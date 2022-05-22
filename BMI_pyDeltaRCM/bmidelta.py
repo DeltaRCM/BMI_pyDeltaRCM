@@ -651,31 +651,3 @@ class BmiDelta(Bmi):
 
     def get_grid_nodes_per_face(self, grid: int, nodes_per_face: np.ndarray) -> np.ndarray:
         raise NotImplementedError
-
-    # @property
-    # def channel_exit_water_flow__speed(self):
-    #     return self.get_value('channel_exit_water_flow__speed')
-
-    # @channel_exit_water_flow__speed.setter
-    # def channel_exit_water_flow__speed(self, src):
-    #     self._delta.u0 = src
-
-    # @property
-    # def channel_exit_water_sediment~bedload__volume_fraction(self):
-    #     return self.get_value('channel_exit_water_sediment~bedload__volume_fraction')
-
-    # @channel_exit_water_sediment_bedload__volume_fraction.setter
-    # def channel_exit_water_sediment_bedload__volume_fraction(self, src):
-    #     self._delta.u0 = src
-
-
-    
-
-        # 'channel_exit_water_x-section__depth',
-        # 'channel_exit_water_x-section__width',
-        # 'channel_exit_water_sediment~suspended__mass_concentration',
-        # 'sea_water_surface__rate_change_elevation',
-        # 'sea_water_surface__mean_elevation',
-        # 'sea_water_surface__elevation',
-        # 'sea_water__depth',
-        # 'sea_bottom_surface__elevation',
